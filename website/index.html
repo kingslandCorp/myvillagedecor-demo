@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Village Decor | Painting &amp; Decorating in Biggin Hill, Westerham &amp; Kent</title>
-<meta name="description" content="My Village Decor — professional painting and decorating across Biggin Hill, Westerham and Kent. Interior, exterior, wallpaper and preparation services, finished to a high standard.">
+<meta name="description" content="My Village Decor — professional painting and decorating across Biggin Hill, Westerham and Kent. Get a free quote today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,21 +17,21 @@
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a class="brand" href="#top">
-      <span class="brand-mark" aria-hidden="true">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 2 L27 9 V21 L15 28 L3 21 V9 Z" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M15 8 L21 11.5 V18.5 L15 22 L9 18.5 V11.5 Z" fill="currentColor"/>
-        </svg>
-      </span>
-      <span class="brand-text">My Village Decor</span>
+      <img src="assets/logo.png" alt="My Village Decor" class="brand-logo">
     </a>
     <nav class="main-nav" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#work">Our Work</a>
       <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact" class="nav-cta">Get a Quote</a>
     </nav>
+    <div class="header-actions">
+      <a href="tel:07484666663" class="header-phone">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        07484 666 663
+      </a>
+      <a href="#quote" class="btn btn-primary btn-sm">Free Quote</a>
+    </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
       <span></span><span></span><span></span>
     </button>
@@ -41,21 +41,33 @@
 <main>
 
   <section class="hero">
+    <div class="hero-bg" style="background-image:url('assets/photo-1.jpg')"></div>
+    <div class="hero-scrim"></div>
     <div class="wrap hero-inner">
-      <p class="eyebrow">Biggin Hill · Westerham · Kent</p>
-      <h1>Painting &amp; decorating, finished properly.</h1>
-      <p class="hero-lede">Interior, exterior and wallpaper work carried out with the kind of care and tidiness you'd want in your own home — from a single feature wall to a full house repaint.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-        <a href="tel:07484666663" class="btn btn-ghost">Call 07484 666 663</a>
+      <div class="hero-copy">
+        <p class="eyebrow">Biggin Hill · Westerham · Kent</p>
+        <h1>Painting &amp; decorating, finished properly.</h1>
+        <p class="hero-lede">Interior, exterior and wallpaper work carried out with the kind of care and tidiness you'd want in your own home — from a single feature wall to a full house repaint.</p>
+        <ul class="hero-stats">
+          <li><strong>10+ yrs</strong><span>local experience</span></li>
+          <li><strong>Fully</strong><span>insured &amp; tidy</span></li>
+          <li><strong>Free</strong><span>no-obligation quotes</span></li>
+        </ul>
       </div>
-      <ul class="hero-stats">
-        <li><strong>10+ yrs</strong><span>local experience</span></li>
-        <li><strong>Fully</strong><span>insured &amp; tidy</span></li>
-        <li><strong>Free</strong><span>no-obligation quotes</span></li>
-      </ul>
+
+      <form class="quote-card" id="quote" onsubmit="return false;">
+        <p class="quote-card-title">Get a free quote</p>
+        <p class="quote-card-sub">Tell us a little about the job — we usually reply within a day.</p>
+        <label class="sr-only" for="qName">Name</label>
+        <input id="qName" type="text" name="name" placeholder="Your name" required>
+        <label class="sr-only" for="qPhone">Phone</label>
+        <input id="qPhone" type="tel" name="phone" placeholder="Phone number" required>
+        <label class="sr-only" for="qJob">Job details</label>
+        <textarea id="qJob" name="message" rows="3" placeholder="Room, size, rough timing..."></textarea>
+        <button type="submit" class="btn btn-primary btn-block">Request My Free Quote</button>
+        <p class="quote-card-alt">Prefer to talk? <a href="tel:07484666663">Call 07484 666 663</a></p>
+      </form>
     </div>
-    <div class="hero-art" aria-hidden="true"></div>
   </section>
 
   <section class="services" id="services">
@@ -97,6 +109,10 @@
         </article>
 
       </div>
+      <div class="services-cta">
+        <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+        <a href="tel:07484666663" class="btn btn-outline">Or call 07484 666 663</a>
+      </div>
     </div>
   </section>
 
@@ -104,14 +120,15 @@
     <div class="wrap">
       <p class="eyebrow center">Recent projects</p>
       <h2 class="section-title center">A sample of the finish quality</h2>
-      <p class="section-note center">Placeholder gallery — swap these tiles for real project photography.</p>
       <div class="gallery">
-        <div class="gallery-tile tile-1"><span>Stairwell repaint</span></div>
-        <div class="gallery-tile tile-2"><span>Exterior refresh</span></div>
-        <div class="gallery-tile tile-3"><span>Feature wallpaper</span></div>
-        <div class="gallery-tile tile-4"><span>Fence &amp; deck stain</span></div>
-        <div class="gallery-tile tile-5"><span>Kitchen ceiling</span></div>
-        <div class="gallery-tile tile-6"><span>Full house exterior</span></div>
+        <div class="gallery-tile tile-wide" style="background-image:url('assets/photo-1.jpg')"><span>Open-plan kitchen repaint</span></div>
+        <div class="gallery-tile" style="background-image:url('assets/photo-5.jpg')"><span>Feature staircase wallpaper</span></div>
+        <div class="gallery-tile" style="background-image:url('assets/photo-4.jpg')"><span>Bold feature wall</span></div>
+        <div class="gallery-tile" style="background-image:url('assets/photo-3.jpg')"><span>Bathroom repaint &amp; prep</span></div>
+        <div class="gallery-tile" style="background-image:url('assets/photo-2.jpg')"><span>Stairwell repaint</span></div>
+      </div>
+      <div class="services-cta">
+        <a href="#quote" class="btn btn-primary">Like what you see? Get a Quote</a>
       </div>
     </div>
   </section>
@@ -127,8 +144,9 @@
           <li>Straight, honest pricing with no surprises</li>
           <li>Small, personal service — you deal directly with the person doing the work</li>
         </ul>
+        <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
       </div>
-      <div class="about-art" aria-hidden="true"></div>
+      <div class="about-art" style="background-image:url('assets/photo-4.jpg')" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -158,7 +176,10 @@
     <div class="wrap cta-inner">
       <h2>Ready to freshen up your space?</h2>
       <p>Get a free, no-obligation quote — usually turned around within a day.</p>
-      <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+      <div class="cta-actions">
+        <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+        <a href="tel:07484666663" class="btn btn-ghost">Call 07484 666 663</a>
+      </div>
     </div>
   </section>
 
@@ -204,6 +225,15 @@
     <p class="footer-credit">Concept &amp; build by <a href="https://legendwebsites.co.uk" target="_blank" rel="noopener">Legend Websites</a></p>
   </div>
 </footer>
+
+<a href="tel:07484666663" class="fab" aria-label="Call My Village Decor">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+</a>
+
+<div class="mobile-cta-bar">
+  <a href="tel:07484666663" class="btn btn-outline btn-block">Call Now</a>
+  <a href="#quote" class="btn btn-primary btn-block">Free Quote</a>
+</div>
 
 <script src="script.js"></script>
 </body>
