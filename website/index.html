@@ -121,11 +121,11 @@
       <p class="eyebrow center">Recent projects</p>
       <h2 class="section-title center">A sample of the finish quality</h2>
       <div class="gallery">
-        <div class="gallery-tile tile-wide" style="background-image:url('assets/photo-1.jpg')"><span>Open-plan kitchen repaint</span></div>
-        <div class="gallery-tile" style="background-image:url('assets/photo-5.jpg')"><span>Feature staircase wallpaper</span></div>
-        <div class="gallery-tile" style="background-image:url('assets/photo-4.jpg')"><span>Bold feature wall</span></div>
-        <div class="gallery-tile" style="background-image:url('assets/photo-3.jpg')"><span>Bathroom repaint &amp; prep</span></div>
-        <div class="gallery-tile" style="background-image:url('assets/photo-2.jpg')"><span>Stairwell repaint</span></div>
+        <button type="button" class="gallery-tile tile-wide" style="background-image:url('assets/photo-1.jpg')" data-full="assets/photo-1-hires.jpg" data-caption="Open-plan kitchen repaint"><span>Open-plan kitchen repaint</span></button>
+        <button type="button" class="gallery-tile" style="background-image:url('assets/photo-5.jpg')" data-full="assets/photo-5-hires.jpg" data-caption="Feature staircase wallpaper"><span>Feature staircase wallpaper</span></button>
+        <button type="button" class="gallery-tile" style="background-image:url('assets/photo-4.jpg')" data-full="assets/photo-4-hires.jpg" data-caption="Bold feature wall"><span>Bold feature wall</span></button>
+        <button type="button" class="gallery-tile" style="background-image:url('assets/photo-3.jpg')" data-full="assets/photo-3-hires.jpg" data-caption="Bathroom repaint &amp; prep"><span>Bathroom repaint &amp; prep</span></button>
+        <button type="button" class="gallery-tile" style="background-image:url('assets/photo-2.jpg')" data-full="assets/photo-2-hires.jpg" data-caption="Stairwell repaint"><span>Stairwell repaint</span></button>
       </div>
       <div class="services-cta">
         <a href="#quote" class="btn btn-primary">Like what you see? Get a Quote</a>
@@ -233,6 +233,22 @@
 <div class="mobile-cta-bar">
   <a href="tel:07484666663" class="btn btn-outline btn-block">Call Now</a>
   <a href="#quote" class="btn btn-primary btn-block">Free Quote</a>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close gallery">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
 </div>
 
 <script src="script.js"></script>
